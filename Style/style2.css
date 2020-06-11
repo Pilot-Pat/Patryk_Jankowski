@@ -170,6 +170,10 @@ p
     width: 100%;
     padding-top: 56.25%
 }
+.mini
+{
+    display: none;
+}
 }
  @media screen and (min-width:768px){
 

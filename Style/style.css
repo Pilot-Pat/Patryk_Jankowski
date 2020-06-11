@@ -79,7 +79,10 @@ body
 background-color: darkblue;
 
 }
-
+.mini
+{
+    display: none;
+}
 .whole
  {
     margin: 0 auto;
