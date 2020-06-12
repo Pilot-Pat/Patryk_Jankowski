@@ -20,12 +20,19 @@
           </div>
     <a id="back"></a>      
     <div class="logo"><h1>Historia Montrealu</h1></div>
-    <div class="menu1">
-        <p></p>
+    <div  id="menu1"  class="menu1">
+        <p class="ppp"></p>
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
         <div class="sidenav">
             <a href="#FR">Panowanie <br/> francuskie</a>
             <a href="#Ang">Panowanie <br/> brytyjskie</a>
             <a href="#Kan">Kanadyjska <br/> metropolia</a>
+          </div>
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#FR">Panowanie <br/> francuskie</a>
+            <a href="#Ang">Panowanie <br/> brytyjskie</a>
+            <a href="#Kan">Kanadyjska <br/> metropolia</a> 
           </div>
     </div>
     <div class="text">
@@ -62,5 +69,16 @@
             <p id="foot">Autor strony: Patryk Jankowski IITB</p>
           </div>
 </div>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
     </body>
     </html>

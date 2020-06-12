@@ -81,10 +81,7 @@ body
        font-family:  Georgia, Times, 'Times New Roman', serif;
     }
   
-    .menu1 
-    { 
-        display: none;
-    }
+
     .menu2 
     {
         display: none;
@@ -174,7 +171,71 @@ p
 {
     display: none;
 }
-}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 25;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    opacity: 70%;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #menu1 {
+    transition: margin-left .5s;
+    padding: 8px;
+  }
+  .sidenav
+  {
+      display: none;
+  }
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
  @media screen and (min-width:768px){
 
       .logo
@@ -203,13 +264,7 @@ p
          font-family:  Georgia, Times, 'Times New Roman', serif;
       }
       
-      .menu1 
-      { 
-        width: 20%;
-        float: left;
-        background-color: darkslateblue;
-       
-      }
+
       .sidenav {
           width: 140px;
           position: fixed;
@@ -219,6 +274,7 @@ p
           background: darkslateblue;
           overflow-x: hidden;
           padding: 8px 0;
+          display: none;
         }
         
         .sidenav a {
@@ -235,7 +291,7 @@ p
       .text
        {   
       
-          width: 80%;
+          width: 100%;
       float: left;
       background-color: lightgreen ;
       
@@ -258,15 +314,11 @@ p
       {
           text-align: center;
       }
-      p
-      {
-          font-size: 4vw;
-      }
+  
       li
       {
           font-size: 4vw;
-          padding-bottom: 5px;
-          list-style-type: square;
+          padding-bottom: 5px; 
       }
       #logo
       {
@@ -324,7 +376,60 @@ p
     text-align: center;
     word-spacing: 3px;
 }
-        
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 25;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    opacity: 70%;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #menu1 {
+    transition: margin-left .5s;
+    padding: 8px;
+  }
+      
      }
 @media screen and (min-width:1024px){
  .logo
@@ -379,6 +484,7 @@ p
      background: darkslateblue;
      overflow-x: hidden;
      padding: 8px 0;
+     display: grid;
    }
    
    .sidenav a {
@@ -396,7 +502,7 @@ p
   {   
  
      width: 80%;
- float: left;
+ float: right;
  background-color: lightgreen ;
  
  } 
@@ -412,6 +518,7 @@ p
      background-color: darkslateblue;
      color: blanchedalmond;
   text-align: center;
+  clear: both;
  }
 
  .map
@@ -423,7 +530,7 @@ p
  {
      font-size: 1.5vw;
      padding-bottom: 5px;
-     list-style-type: square;
+     
  }
  #logo
  {
@@ -450,7 +557,7 @@ text-align: center;
 .border
 {
 text-align: center;
-font-size: 1vw;
+font-size: 1.5vw;
 font-style: italic;
 }
 .list
@@ -475,4 +582,12 @@ overflow: hidden;
 width: 100%;
 padding-top: 56.25%
 }  
+.openbtn 
+{
+    display: none;
+}
+.sidebar
+{
+    display: none;
+}
 }

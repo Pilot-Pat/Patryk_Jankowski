@@ -99,14 +99,15 @@ background-color: darkblue;
 
    font-family:  Georgia, Times, 'Times New Roman', serif;
 }
-.menu1 
-{ 
-   display: none;
-}
+
 .menu2 
 {
     display: none;
  
+}
+.sidenav
+{
+    display: none;
 }
 .text
  {   
@@ -168,7 +169,7 @@ button
     font-size: 6vw;
     text-align: center;
 }
-button:hover
+.forms:hover
 {
     border: 3px solid red;
     background-color: goldenrod;
@@ -189,12 +190,68 @@ font-weight: bold;
 font-size: 6vw;
 
 }
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 25;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    opacity: 70%;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #menu1 {
+    transition: margin-left .5s;
+    padding: 8px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
 }
 @media screen and (min-width:768px){
-.logo
-{
-    background-color: chocolate;
-}
+
 .whole
  {
     margin: 0 auto;
@@ -216,14 +273,11 @@ body
 
    font-family:  Georgia, Times, 'Times New Roman', serif;
 }
-
-.menu1 
-{ 
-  width: 20%;
-  float: left;
-  background-color: darkblue;
- 
+.ppp
+{
+    display: none;
 }
+
 .sidenav {
     width: 140px;
     position: fixed;
@@ -233,6 +287,7 @@ body
     background: darkblue;
     overflow-x: hidden;
     padding: 8px 0;
+   display: none;
   }
   
   .sidenav a {
@@ -249,7 +304,7 @@ body
 .text
  {   
 
-    width: 80%;
+    width: 100%;
 float: left;
 background-color: lightsteelblue;
 
@@ -311,7 +366,7 @@ button
     font-size: 2vw;
     text-align: center;
 }
-button:hover
+.forms:hover
 {
     border: 3px solid red;
     background-color: goldenrod;
@@ -332,14 +387,63 @@ font-weight: bold;
 font-size: 2vw;
 
 }
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 25;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    opacity: 70%;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #menu1 {
+    transition: margin-left .5s;
+    padding: 8px;
+  }
+
 }
 @media screen and (min-width:1024px){
 
-   
-    .logo
-    {
-        background-color: chocolate;
-    }
     .whole
      {
         margin: 0 auto;
@@ -361,13 +465,17 @@ font-size: 2vw;
     
        font-family:  Georgia, Times, 'Times New Roman', serif;
     }
-    
+    .ppp
+    {
+        display: inline;
+    }
     .menu1 
     { 
       width: 20%;
       float: left;
       background-color: darkblue;
-     
+      
+    
     }
     .sidenav {
         width: 170px;
@@ -378,6 +486,7 @@ font-size: 2vw;
         background: darkblue;
         overflow-x: hidden;
         padding: 8px 0;
+        display: grid;
       }
       
       .sidenav a {
@@ -395,7 +504,7 @@ font-size: 2vw;
      {   
     
         width: 80%;
-    float: left;
+    float: right;
     background-color: lightsteelblue;
     
     } 
@@ -403,10 +512,10 @@ font-size: 2vw;
     {
         font-size: 6vw;
         width: 100%;
-        height: 5%;
+     height: 5%;
         background-color: darkblue;
         color: blanchedalmond;
-    
+    clear: both;
     }
     iframe
     {
@@ -481,5 +590,13 @@ text-align: left;
 font-weight: bold;
 font-size: 1.5vw;
 
+}
+.openbtn 
+{
+    display: none;
+}
+.sidebar
+{
+    display: none;
 }
 }

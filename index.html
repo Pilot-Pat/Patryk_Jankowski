@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Montreal</title>
 <link rel="stylesheet" type="text/css" href="Style/style.css">
+
 <link type="text/css" rel="stylesheet" href="js/lightgallery.css" /> 
 <link rel="shortcut icon" href="Img/Znak.png">
 </head>
@@ -18,13 +19,15 @@
             <a href="Montreal_Sport.html">Sport</a>
             <a href="Montreal_Turystyka.html">Turystyka</a>
             
-            <a href="index.html"><img id="flag" src="Img/Flaga.png" alt="flaga"></a>
+            
+         <a href="index.html"><img id="flag" src="Img/Flaga.png" alt="flaga"></a>
           
           </div>
     <a id="back"></a>      
 <div class="logo"><img id="logo" src="Img/logo.png" alt="logo"  /><a></a></div>
-<div class="menu1">
-    <p></p>
+<div id="menu1" class="menu1">
+    <p class="ppp"></p>
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
   <div class="sidenav">
     <a href="#Info">Informacje</a>
     <a href="#Etymologia">Etymologia</a>
@@ -34,6 +37,22 @@
     <a href="#Galeria">Galeria</a>
     <a href="#Ankieta">Ankieta</a>
   </div>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#Info">Informacje</a>
+    <a href="#Etymologia">Etymologia</a>
+    <a href="#Demografia">Demografia</a>
+    <a href="#Miasta">Miasta</a>
+    <a href="#Mapa">Mapa</a>
+    <a href="#Galeria">Galeria</a>
+    <a href="#Ankieta">Ankieta</a>
+  </div>
+
+
+
+
+
+
 </div>
 <div class="text"><a id="Info"></a>
  <h1>Informacje ogólne</h1>
@@ -146,8 +165,8 @@
   <br/>
   Wszelkie uwagi: <br/>
   <label> <textarea name="message" rows="10" cols="30" required>Twoja opinia o stronie</textarea></label><br><br>
-  <button type="submit" onclick="alert('Dziękuję za wypełnienie ankiety')">Wyślij</button>
-  <button type="reset">Wyczyść formularz</button> 
+  <button class="forms" type="submit" onclick="alert('Dziękuję za wypełnienie ankiety')">Wyślij</button>
+  <button class="forms" type="reset">Wyczyść formularz</button> 
 </form>
 </div>
 <br/><br/>
@@ -162,6 +181,17 @@
 <script src="js/lg-fullscreen.min.js"></script>
 <script >
     lightGallery(document.getElementById('lightgallery')); 
+    function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
 </script>
 </body>
 </html>
